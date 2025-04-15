@@ -13,7 +13,8 @@
     "medusa"
   ],
   "scripts": {
-    "build": "node node_modules/@medusajs/cli/cli.js build",
+    "create-admin": "node node_modules/@medusajs/cli/cli.js user --email admin@example.com --password admin123 --first-name Admin --last-name User",
+    "build": "node node_modules/@medusajs/cli/cli.js build && ln -s .medusa/server/public/ public",
     "seed": "node node_modules/@medusajs/cli/cli.js exec ./src/scripts/seed.ts",
     "start": "node node_modules/@medusajs/cli/cli.js start",
     "dev": "node node_modules/@medusajs/cli/cli.js develop",
